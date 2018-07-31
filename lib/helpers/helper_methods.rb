@@ -7,4 +7,8 @@ class Helper_Methods
     has_content?(title)
   end
 
+  def wait(num)
+    sleep num
+  end
+
 end
