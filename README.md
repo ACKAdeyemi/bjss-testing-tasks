@@ -1,5 +1,4 @@
 # <p align="center"> BJSS Testing Tasks </p>
-<hr>
 
 #### Task:
 
