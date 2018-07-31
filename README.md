@@ -16,12 +16,3 @@ Confirm 'Hello World!' is rendered after the loading bar disappears
 
 **TEST 3:**
 POST to the http://dummy.restapiexample.com/ create route and verify you receive a response that indicates that a user was made.
-
-
-This entire task makes use of:
-
-* Ruby (programming language)
-* Capybara (for web automation)
-* Rspec (for testing framework)
-* Httparty (for http requests to api)
-* JSON gem (for parsing json)
