@@ -8,7 +8,25 @@ class The_Internet_Homepage
 
   def visit_home_page
     visit(HOMEPAGE_URL)
-    sleep 2
+    sleep 1
+  end
+
+  def click_challenging_dom
+    all('a').each do |tag|
+      if tag.text == 'Challenging DOM'
+        tag.click
+        break
+      end
+    end
+  end
+
+  def click_dynamic_loading
+    all('a').each do |tag|
+      if tag.text == 'Dynamic Loading'
+        tag.click
+        break
+      end
+    end
   end
 
 end
