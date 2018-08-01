@@ -16,15 +16,21 @@ describe "Testing two examples from the-internet app" do
     end
 
     it "should confirm that the red button label changes when clicked" do
+      # I performed 4 iterations
       arr = []
 
+      # store current button text in a varibale
       button_text = @the_internet_site.the_internet_challenging_dom.get_button_text
+      # add current button text to array for comparison
       arr.push button_text
       @the_internet_site.the_internet_challenging_dom.click_red_button
       @the_internet_site.helper_methods.wait(2)
 
+      # overwrite previous button text with current
       button_text = @the_internet_site.the_internet_challenging_dom.get_button_text
+      # add current button text to array for comparison
       arr.push button_text
+      # now compare current and previous button text array items, if the text is different then the method will return true
       expect(@the_internet_site.the_internet_challenging_dom.check_button_label_change(arr)).to eq true
       @the_internet_site.the_internet_challenging_dom.click_red_button
       @the_internet_site.helper_methods.wait(2)
@@ -41,7 +47,7 @@ describe "Testing two examples from the-internet app" do
       @the_internet_site.the_internet_challenging_dom.click_red_button
       @the_internet_site.helper_methods.wait(3)
 
-      p arr
+      p arr # print for reference in terminal
     end
 
   end
