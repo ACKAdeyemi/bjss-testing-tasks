@@ -26,7 +26,7 @@ This entire task makes use of:
 * **Httparty gem** (for http requests to api)
 * **JSON gem** (for parsing json)
 
-**How to Download and run tests** - click 'clone or download' button, download a zip of our project, unzip, open the index.html/run `some command` in the terminal (make sure to be in `main project folder` directory) and enjoy.
+**How to Download and run tests** - click 'clone or download' button, download a zip of our project, unzip, run the bash commands `bundle install` and the `rspec` in the terminal (make sure to be in `main project folder` directory) and enjoy.
 
 <hr>
 
