@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Testing two examples from the-internet app" do
+describe "Testing two examples from the-internet web app - Test Tasks 1 and 2" do
 
   before(:all) do
     @the_internet_site = The_Internet.new

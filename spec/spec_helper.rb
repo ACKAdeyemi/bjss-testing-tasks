@@ -4,6 +4,7 @@ require 'json'
 require 'rspec'
 
 require_relative '../lib/the_internet_site.rb'
+require_relative '../lib/rest_api_example.rb'
 
 RSpec.configure do |config|
   config.formatter = :documentation
