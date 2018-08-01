@@ -60,7 +60,14 @@ describe "Testing two examples from the-internet app" do
       expect(@the_internet_site.helper_methods.check_page_content('Dynamically Loaded Page Elements')).to eq true
       @the_internet_site.the_internet_dynamic_loading.click_example_two
       expect(@the_internet_site.helper_methods.check_page_content('Example 2: Element rendered after the fact')).to eq true
-      @the_internet_site.helper_methods.wait(3)
+      @the_internet_site.helper_methods.wait(1)
+    end
+
+    it "should confirm 'Hello World!' is rendered after the loading bar disappears" do
+      @the_internet_site.the_internet_dynamic_loading.click_start_button
+      expect(@the_internet_site.the_internet_dynamic_loading.check_hello_world).to eq true
+      expect(@the_internet_site.the_internet_dynamic_loading.check_loading_div).to eq false
+      @the_internet_site.helper_methods.wait(2)
     end
 
   end

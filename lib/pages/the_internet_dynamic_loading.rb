@@ -12,4 +12,23 @@ class The_Internet_Dynamic_Loading
     end
   end
 
+  def click_start_button
+    click_button('Start')
+  end
+
+  def check_loading_div
+    has_content?('#loading')
+  end
+
+  def check_hello_world
+    counter = 0
+
+    if has_content?('Hello World!') == false && counter < 5
+      sleep 2
+      counter += 1
+    elsif has_content?('Hello World!') == true
+      true
+    end
+  end
+
 end
