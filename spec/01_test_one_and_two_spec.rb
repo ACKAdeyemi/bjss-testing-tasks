@@ -24,7 +24,7 @@ describe "Testing two examples from the-internet web app - Test Tasks 1 and 2" d
       # add current button text to array for comparison
       arr.push button_text
       @the_internet_site.the_internet_challenging_dom.click_red_button
-      @the_internet_site.helper_methods.wait(2)
+      @the_internet_site.helper_methods.wait(3)
 
       # overwrite previous button text with current
       button_text = @the_internet_site.the_internet_challenging_dom.get_button_text
@@ -33,13 +33,13 @@ describe "Testing two examples from the-internet web app - Test Tasks 1 and 2" d
       # now compare current and previous button text array items, if the text is different then the method will return true
       expect(@the_internet_site.the_internet_challenging_dom.check_button_label_change(arr)).to eq true
       @the_internet_site.the_internet_challenging_dom.click_red_button
-      @the_internet_site.helper_methods.wait(2)
+      @the_internet_site.helper_methods.wait(3)
 
       button_text = @the_internet_site.the_internet_challenging_dom.get_button_text
       arr.push button_text
       expect(@the_internet_site.the_internet_challenging_dom.check_button_label_change(arr)).to eq true
       @the_internet_site.the_internet_challenging_dom.click_red_button
-      @the_internet_site.helper_methods.wait(2)
+      @the_internet_site.helper_methods.wait(3)
 
       button_text = @the_internet_site.the_internet_challenging_dom.get_button_text
       arr.push button_text
