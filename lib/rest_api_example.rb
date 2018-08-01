@@ -19,8 +19,6 @@ class RestAPI
 
     post_headers = "{\"Accept-Encoding\"=>\"\",\"Content-Type\"=>\"application\/json\"}"
 
-
-
     data_hash = JSON.parse(post_data.gsub('=>', ':'))
     headers_hash = JSON.parse(post_headers.gsub('=>', ':'))
     p data_hash.class
