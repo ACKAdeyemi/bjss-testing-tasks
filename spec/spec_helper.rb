@@ -2,6 +2,7 @@ require 'capybara'
 require 'httparty'
 require 'json'
 require 'rspec'
+require 'selenium-webdriver'
 
 require_relative '../lib/the_internet_site.rb'
 require_relative '../lib/rest_api_example.rb'
@@ -10,13 +11,13 @@ RSpec.configure do |config|
   config.formatter = :documentation
 end
 
-Capybara.register_driver :chrome do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :selenium_chrome)
 end
 
 Capybara.configure do |config|
   # config.ignore_hidden_elements = false #ensure all hidden elements on the page are available (delete if not needed)
   config.default_max_wait_time = 10 #Wait time for asynchronous processes to finish
   config.match = :prefer_exact # this setting is to ensure Capybara has specific matching rather than fuzzy logic
-  config.default_driver = :chrome #ensure the default driver is chrome
+  config.default_driver = :selenium_chrome #ensure the default driver is chrome
 end

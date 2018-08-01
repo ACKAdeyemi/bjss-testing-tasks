@@ -15,35 +15,15 @@ class RestAPI
   end
 
   def post_new_employee
-    post_data = "{\"employee_name\"=>\"Testerson\",\"employee_salary\"=>\"£50k\",\"employee_age\"=>\"35\"}"
-
-    post_headers = "{\"Accept-Encoding\"=>\"\",\"Content-Type\"=>\"application\/json\"}"
-
-    data_hash = JSON.parse(post_data.gsub('=>', ':'))
-    headers_hash = JSON.parse(post_headers.gsub('=>', ':'))
-    p data_hash.class
-    p headers_hash.class
-    p data_hash
-
-    JSON.parse(self.class.post("/create", body: data_hash).body)
-    # JSON.parse(self.class.post("/create",
-    #   headers: headers_hash,
-    #   body: data_hash.to_json
-    # ).body)
+    JSON.parse(self.class.post("/create",
+      :headers => {
+        "Content-Type" => "application/json"
+      },
+      :body => {
+        :name => "Employee 4",
+        :salary => 50000,
+        :age => 35
+      }.to_json).body)
   end
-
-  # def post_new_employee
-  #   JSON.parse(self.class.post("/create",
-  #     headers: {
-  #       "Accept" => "application\/json",
-  #       "Accept-Encoding" => "",
-  #       "Content-Type" => "application\/json"
-  #     },
-  #     body: {
-  #       "employee_name" => "Mr Tester Testerson",
-  #       "employee_salary" => "£50k",
-  #       "employee_age" => 35
-  #     }).body)
-  # end
 
 end
