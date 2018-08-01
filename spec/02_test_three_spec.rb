@@ -12,7 +12,6 @@ describe 'Dummy Rest API Example POST request Test - Test Task 3' do
     end
 
     it "should respond with json related to a specified user id" do
-      p @partial_response
       # retrieving the value of the 'employee_name' key
       expect(@partial_response['employee_name']).to eq 'Jon Snow'
     end
@@ -22,14 +21,11 @@ describe 'Dummy Rest API Example POST request Test - Test Task 3' do
     end
 
     it "should send back all employee details in an array" do
-      # p @rest_api.get_all_employees
       expect(@rest_api.get_all_employees).to be_kind_of Array
     end
 
     it "should POST to the api and confirm that the new user has been made" do
       @rest_api.post_new_employee
-      # return the resource instance that I just posted
-      p @rest_api.get_all_employees.last
 
       # now checking each hash value of related key for data type and value to confirm the user that I POSTed was added correctly
       expect(@rest_api.get_all_employees.last['employee_name']).to be_kind_of String

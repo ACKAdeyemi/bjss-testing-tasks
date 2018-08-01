@@ -16,7 +16,6 @@ Capybara.register_driver :selenium do |app|
 end
 
 Capybara.configure do |config|
-  # config.ignore_hidden_elements = false #ensure all hidden elements on the page are available (delete if not needed)
   config.default_max_wait_time = 10 #Wait time for asynchronous processes to finish
   config.match = :prefer_exact # this setting is to ensure Capybara has specific matching rather than fuzzy logic
   config.default_driver = :selenium_chrome #ensure the default driver is chrome

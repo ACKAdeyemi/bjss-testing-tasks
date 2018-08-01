@@ -46,8 +46,6 @@ describe "Testing two examples from the-internet web app - Test Tasks 1 and 2" d
       expect(@the_internet_site.the_internet_challenging_dom.check_button_label_change(arr)).to eq true
       @the_internet_site.the_internet_challenging_dom.click_red_button
       @the_internet_site.helper_methods.wait(3)
-
-      p arr # print for reference in terminal
     end
 
   end

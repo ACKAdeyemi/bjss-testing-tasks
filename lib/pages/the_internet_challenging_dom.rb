@@ -11,8 +11,7 @@ class The_Internet_Challenging_DOM
   end
 
   def get_button_text
-    # print for reference in terminal
-    p find(RED_BUTTON_CLASS).text
+    find(RED_BUTTON_CLASS).text
   end
 
   def check_button_label_change(arr)
