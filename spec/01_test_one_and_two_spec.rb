@@ -15,6 +15,35 @@ describe "Testing two examples from the-internet app" do
       @the_internet_site.helper_methods.wait(1)
     end
 
+    it "should confirm that the red button label changes when clicked" do
+      arr = []
+
+      button_text = @the_internet_site.the_internet_challenging_dom.get_button_text
+      arr.push button_text
+      @the_internet_site.the_internet_challenging_dom.click_red_button
+      @the_internet_site.helper_methods.wait(2)
+
+      button_text = @the_internet_site.the_internet_challenging_dom.get_button_text
+      arr.push button_text
+      expect(@the_internet_site.the_internet_challenging_dom.check_button_label_change(arr)).to eq true
+      @the_internet_site.the_internet_challenging_dom.click_red_button
+      @the_internet_site.helper_methods.wait(2)
+
+      button_text = @the_internet_site.the_internet_challenging_dom.get_button_text
+      arr.push button_text
+      expect(@the_internet_site.the_internet_challenging_dom.check_button_label_change(arr)).to eq true
+      @the_internet_site.the_internet_challenging_dom.click_red_button
+      @the_internet_site.helper_methods.wait(2)
+
+      button_text = @the_internet_site.the_internet_challenging_dom.get_button_text
+      arr.push button_text
+      expect(@the_internet_site.the_internet_challenging_dom.check_button_label_change(arr)).to eq true
+      @the_internet_site.the_internet_challenging_dom.click_red_button
+      @the_internet_site.helper_methods.wait(3)
+
+      p arr
+    end
+
   end
 
   context "testing the second example" do
