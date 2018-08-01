@@ -23,7 +23,7 @@ This entire task makes use of:
 * **Ruby** (programming language)
 * **Capybara** (for web automation)
 * **Rspec** (for testing framework)
-* **Httparty** (for http requests to api)
+* **Httparty gem** (for http requests to api)
 * **JSON gem** (for parsing json)
 
 **How to Download and run tests** - click 'clone or download' button, download a zip of our project, unzip, open the index.html/run `some command` in the terminal (make sure to be in `main project folder` directory) and enjoy.
